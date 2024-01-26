@@ -3,8 +3,8 @@ import dotenv from 'dotenv';
 import cors from 'cors';
 import morgan from 'morgan';
 import connectDB from './db/connectDB.js';
-import userRouter from './routes/userRouter.js';
-userRouter
+import userRouter from './routes/userRoute.js';
+import errorMiddleware from './middlewares/errorMiddleware.js';
 dotenv.config()
 
 
@@ -20,13 +20,16 @@ app.use(morgan('dev'))
 
 
 //routes
-app.use('/api/v1/user' , userRouter)
+app.use('/api/v1/user', userRouter)
 
+
+// Validation Middleware
+app.use(errorMiddleware)
 
 //DB Configuration
 connectDB()
 
 //listening port
-app.listen(PORT, ()=>{
+app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
 })
