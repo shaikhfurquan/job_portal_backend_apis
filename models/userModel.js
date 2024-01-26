@@ -4,7 +4,6 @@ import bcrypt from "bcryptjs";
 import JWT from 'jsonwebtoken'
 
 const userSchema = new mongoose.Schema({
-
     name: {
         type: String,
         required: [true, 'Name is required']
