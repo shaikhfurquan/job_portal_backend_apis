@@ -50,7 +50,7 @@ export const loginUser = async (req, res, next) => {
         if (!isMatch) {
             next("Invalid credentials")
         }
-        user.password = undefined
+        // user.password = undefined
         const token = user.createJWT()
         res.status(200).json({
             success: true,
