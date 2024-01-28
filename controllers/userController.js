@@ -67,6 +67,31 @@ export const loginUser = async (req, res, next) => {
 }
 
 
+export const updateUser = async (req, res, next) => {
+    try {
+        const {name, email, lastName, location} = req.body
+        if(!name || !email || !lastName || !location){
+            next("Please Provide All Fields")
+        }
+
+        const user = await UserModel.findOne({_id : req.user.userId})
+        user.name = name
+        user.lastName = lastName
+        user.email = email
+        user.location = location
+
+        await user.save()
+        const token = user.createJWT()
+        res.status(200).json({
+            success : true,
+            message : 'User Updated Successfully',
+            user : user,
+            token : token
+        })
+    } catch (error) {
+        next(error.message);
+    }
+}
 export const getUser = (req, res) => {
     try {
         res.status(200).json({
@@ -77,3 +102,4 @@ export const getUser = (req, res) => {
         next(error.message);
     }
 }
+
