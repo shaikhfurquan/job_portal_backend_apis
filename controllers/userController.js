@@ -1,5 +1,6 @@
 import UserModel from "../models/userModel.js";
 
+
 export const registerUser = async (req, res, next) => {
     try {
         const { name, email, password } = req.body;
@@ -37,7 +38,8 @@ export const loginUser = async (req, res, next) => {
         const { email, password } = req.body
         //validation 
         if (!email || !password) {
-            next("please provide all fields")
+            next("please provide all fields" , 400)
+            
         }
 
         const user = await UserModel.findOne({ email }).select("+password")
