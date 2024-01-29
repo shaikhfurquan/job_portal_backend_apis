@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import connectDB from './db/connectDB.js';
 import userRouter from './routes/userRoute.js';
 import errorMiddleware from './middlewares/errorMiddleware.js';
+import testRouter from './routes/testRoute.js';
 dotenv.config()
 
 
@@ -20,6 +21,7 @@ app.use(morgan('dev'))
 
 
 //routes
+app.use('/api/v1/', testRouter)
 app.use('/api/v1/user', userRouter)
 
 
