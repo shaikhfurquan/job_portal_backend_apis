@@ -35,3 +35,6 @@ UPDATE JOB BY ID ===> PATCH ===> http://localhost:4300/api/v1/job/update-job/65b
 
 
 DELETE JOB BY ID ===> DELETE ===> http://localhost:4300/api/v1/job/delete-job/65b7ffd9b617ae77402cd6b6
+
+
+GET JOB BY USER ===> GET http://localhost:4300/api/v1/job/job-stats
