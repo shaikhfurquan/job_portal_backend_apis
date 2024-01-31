@@ -12,3 +12,26 @@ LOGIN USER ===> POST ===> http://localhost:4300/api/v1/user/login
     "email"  : "sf@gmail.com",
     "password" : "123456"
 }
+
+
+
+
+JOBS
+CREATE JOB ===> POST ===> http://localhost:4300/api/v1/job/create-job
+{
+  "company" : "Tekisky Pvt Ltd",
+  "position" : "Back-end-Developer"
+}
+
+
+GET ALL JOBS ===> GET ===> http://localhost:4300/api/v1/job/get-job
+
+
+UPDATE JOB BY ID ===> PATCH ===> http://localhost:4300/api/v1/job/update-job/65b7ffd9b617ae77402cd6b6
+{
+  "company" : "Wipro",
+  "position" : "Java Developer"
+}
+
+
+DELETE JOB BY ID ===> DELETE ===> http://localhost:4300/api/v1/job/delete-job/65b7ffd9b617ae77402cd6b6
