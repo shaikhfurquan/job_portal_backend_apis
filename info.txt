@@ -14,6 +14,14 @@ LOGIN USER ===> POST ===> http://localhost:4300/api/v1/user/login
 }
 
 
+UPDATE USER ===> PUT ===> http://localhost:4300/api/v1/user/update
+{
+  "name" : "sff",
+  "email" : "sff@gmail.com",
+  "lastName" : "Super",
+  "location" : "pune"
+}
+
 
 
 JOBS
@@ -24,7 +32,37 @@ CREATE JOB ===> POST ===> http://localhost:4300/api/v1/job/create-job
 }
 
 
-GET ALL JOBS ===> GET ===> http://localhost:4300/api/v1/job/get-job
+GET ALL JOBS ===> GET ===> 
+http://localhost:4300/api/v1/job/get-job
+http://localhost:4300/api/v1/job/get-job?status=reject
+http://localhost:4300/api/v1/job/get-job?status=interview
+http://localhost:4300/api/v1/job/get-job?status=pending
+
+http://localhost:4300/api/v1/job/get-job?workType=contaract
+http://localhost:4300/api/v1/job/get-job?workType=part-time
+
+http://localhost:4300/api/v1/job/get-job?status=interview&workType=full-time
+http://localhost:4300/api/v1/job/get-job?status=interview&workType=internship
+http://localhost:4300/api/v1/job/get-job?status=pending&workType=internship
+
+//search JOBS
+http://localhost:4300/api/v1/job/get-job?search=design
+http://localhost:4300/api/v1/job/get-job?search=soft
+
+
+//latest oldest job
+http://localhost:4300/api/v1/job/get-job?sort=latest
+http://localhost:4300/api/v1/job/get-job?sort=oldest
+
+
+// sort a-z and z-a
+http://localhost:4300/api/v1/job/get-job?sort=z-a
+http://localhost:4300/api/v1/job/get-job?sort=a-z
+
+//page and page-limit
+http://localhost:4300/api/v1/job/get-job?page=2&limit=20
+
+
 
 
 UPDATE JOB BY ID ===> PATCH ===> http://localhost:4300/api/v1/job/update-job/65b7ffd9b617ae77402cd6b6
@@ -37,4 +75,4 @@ UPDATE JOB BY ID ===> PATCH ===> http://localhost:4300/api/v1/job/update-job/65b
 DELETE JOB BY ID ===> DELETE ===> http://localhost:4300/api/v1/job/delete-job/65b7ffd9b617ae77402cd6b6
 
 
-GET JOB BY USER ===> GET http://localhost:4300/api/v1/job/job-stats
+GET JOB BY USER ===> GET  ===>  http://localhost:4300/api/v1/job/job-stats
