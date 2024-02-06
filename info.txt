@@ -38,6 +38,8 @@ http://localhost:4300/api/v1/job/get-job?status=reject
 http://localhost:4300/api/v1/job/get-job?status=interview
 http://localhost:4300/api/v1/job/get-job?status=pending
 
+
+//SEARCH JOB ON THE BASIS OF workType
 http://localhost:4300/api/v1/job/get-job?workType=contaract
 http://localhost:4300/api/v1/job/get-job?workType=part-time
 
