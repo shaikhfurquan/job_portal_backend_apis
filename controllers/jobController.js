@@ -26,7 +26,7 @@ export const createJob = async (req, res, next) => {
 export const getAllJob = async (req, res, next) => {
   try {
 
-    console.log("req user==>" , req.user);
+    // console.log("req user==>" , req.user);
     const {status, workType, search, sort} = req.query
     // conditions for searching filters on the basis of createdBy(userId)
     const queryObject = {

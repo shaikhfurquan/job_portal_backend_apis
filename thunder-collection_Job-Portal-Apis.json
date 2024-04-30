@@ -1,0 +1,254 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Job-Portal-Apis",
+    "dateExported": "2024-02-16T07:07:04.473Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "164ebbbf-0004-4835-8611-a168c17b9d47",
+            "name": "users",
+            "containerId": "",
+            "created": "2024-01-26T18:25:33.905Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "d785d796-a694-4310-bf6b-c182b586ad4a",
+            "name": "job",
+            "containerId": "",
+            "created": "2024-01-29T18:52:33.719Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "bd70ede0-e8f5-4c26-9591-fb45c7f0d9d7",
+            "colId": "6e4d2deb-5a4b-49c5-9105-60a2d8c44c16",
+            "containerId": "164ebbbf-0004-4835-8611-a168c17b9d47",
+            "name": "register",
+            "url": "http://localhost:4300/api/v1/user/register",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-01-26T18:25:56.815Z",
+            "modified": "2024-01-29T19:34:13.865Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\" : \"sf\",\n    \"email\"  : \"sf@gmail.com\",\n    \"password\" : \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "f09c0aba-57b3-4543-99e8-8f76e817c267",
+            "colId": "6e4d2deb-5a4b-49c5-9105-60a2d8c44c16",
+            "containerId": "164ebbbf-0004-4835-8611-a168c17b9d47",
+            "name": "login",
+            "url": "http://localhost:4300/api/v1/user/login",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-01-26T18:26:15.846Z",
+            "modified": "2024-01-31T19:35:26.550Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\" : \"sf\",\n    \"email\"  : \"sf@gmail.com\",\n    \"password\" : \"123456\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8a58c6fa-7f01-4cec-a906-87974d19a924",
+            "colId": "6e4d2deb-5a4b-49c5-9105-60a2d8c44c16",
+            "containerId": "",
+            "name": "test",
+            "url": "http://localhost:4300/api/v1/test-post",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-01-28T07:30:42.083Z",
+            "modified": "2024-01-28T08:24:07.907Z",
+            "headers": [
+                {
+                    "name": "Authorization",
+                    "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWIzNmRkNTY1NDI2MmVmYWQzMDZkNGEiLCJpYXQiOjE3MDY0Mjc0NDcsImV4cCI6MTcwNjUxMzg0N30.SZeLt1LCYHIv3_2T_vawdRKV7haQ7t9Ui-F44iVSC58"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"like\" : \"subs\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "85e875bd-836c-4d51-bc1e-fc9d8517d086",
+            "colId": "6e4d2deb-5a4b-49c5-9105-60a2d8c44c16",
+            "containerId": "164ebbbf-0004-4835-8611-a168c17b9d47",
+            "name": "update",
+            "url": "http://localhost:4300/api/v1/user/update",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2024-01-28T09:03:29.577Z",
+            "modified": "2024-01-28T09:07:25.516Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\" : \"sff\",\n  \"email\" : \"sff@gmail.com\",\n  \"lastName\" : \"Super\",\n  \"location\" : \"pune\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWIzNmRkNTY1NDI2MmVmYWQzMDZkNGEiLCJpYXQiOjE3MDY0MzI4MTEsImV4cCI6MTcwNjUxOTIxMX0.xJvPBJ8m2mRp014gxFAGV9pCHkMH7hQkpdbk8lSZucA"
+            },
+            "tests": []
+        },
+        {
+            "_id": "fb12108e-61b9-4e53-999c-95caac2ee9d8",
+            "colId": "6e4d2deb-5a4b-49c5-9105-60a2d8c44c16",
+            "containerId": "d785d796-a694-4310-bf6b-c182b586ad4a",
+            "name": "create",
+            "url": "http://localhost:4300/api/v1/job/create-job",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-01-29T18:52:43.562Z",
+            "modified": "2024-01-30T15:09:57.254Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"company\" : \"Wipro\",\n  \"position\" : \"Backend-end-Developer\"\n}\n",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWI3ZmRiNWViNWYyOGJhY2I4NmZhZmQiLCJpYXQiOjE3MDY1NTY4NTYsImV4cCI6MTcwNjY0MzI1Nn0.mWnonvqaR2PJWz-HwQZTqV0GtmrUjz-RNo2O2q9pnfU"
+            },
+            "tests": []
+        },
+        {
+            "_id": "e02e1343-24b4-4247-b7a5-a9883320b155",
+            "colId": "6e4d2deb-5a4b-49c5-9105-60a2d8c44c16",
+            "containerId": "d785d796-a694-4310-bf6b-c182b586ad4a",
+            "name": "all-jobs",
+            "url": "http://localhost:4300/api/v1/job/get-job?page=2&limit=40",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-01-29T19:56:20.249Z",
+            "modified": "2024-02-02T07:20:56.497Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "status",
+                    "value": "pending",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "workType",
+                    "value": "internship",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "search",
+                    "value": "soft",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "sort",
+                    "value": "z-a",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "page",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "limit",
+                    "value": "40",
+                    "isPath": false
+                }
+            ],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWI3ZmRiNWViNWYyOGJhY2I4NmZhZmQiLCJpYXQiOjE3MDY4NTg0MjQsImV4cCI6MTcwNjk0NDgyNH0.bdi6Zs27lRrCxQ6jgAdFJftnRkZtJBI8a0OEROzHLOE"
+            },
+            "tests": []
+        },
+        {
+            "_id": "ff322f3e-cc24-41d2-b489-dfc1b6e06d36",
+            "colId": "6e4d2deb-5a4b-49c5-9105-60a2d8c44c16",
+            "containerId": "d785d796-a694-4310-bf6b-c182b586ad4a",
+            "name": "update-by-id",
+            "url": "http://localhost:4300/api/v1/job/update-job/65b7ffd9b617ae77402cd6b6",
+            "method": "PATCH",
+            "sortNum": 80000,
+            "created": "2024-01-30T06:37:24.681Z",
+            "modified": "2024-01-30T13:43:11.470Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"company\" : \"Wipro\",\n  \"position\" : \"Java Developer\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWI3ZmRiNWViNWYyOGJhY2I4NmZhZmQiLCJpYXQiOjE3MDY1OTcwNjcsImV4cCI6MTcwNjY4MzQ2N30.iAQq7BFAp-Hmq3jbeZ6MtwUCRv9HLbXvLcSrPdrtbb4"
+            },
+            "tests": []
+        },
+        {
+            "_id": "7282773c-4c0f-4ce0-a748-86035c711ef6",
+            "colId": "6e4d2deb-5a4b-49c5-9105-60a2d8c44c16",
+            "containerId": "d785d796-a694-4310-bf6b-c182b586ad4a",
+            "name": "delete",
+            "url": "http://localhost:4300/api/v1/job/delete-job/65b90360f3a5996f965afa99",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2024-01-30T14:10:01.828Z",
+            "modified": "2024-01-30T14:13:00.061Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWI3ZmRiNWViNWYyOGJhY2I4NmZhZmQiLCJpYXQiOjE3MDY1NTY4NTYsImV4cCI6MTcwNjY0MzI1Nn0.mWnonvqaR2PJWz-HwQZTqV0GtmrUjz-RNo2O2q9pnfU"
+            },
+            "tests": []
+        },
+        {
+            "_id": "cd8dc02b-bc2f-40ca-9b68-759fb894d346",
+            "colId": "6e4d2deb-5a4b-49c5-9105-60a2d8c44c16",
+            "containerId": "d785d796-a694-4310-bf6b-c182b586ad4a",
+            "name": "job-by-user",
+            "url": "http://localhost:4300/api/v1/job/job-stats",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-01-31T11:07:50.002Z",
+            "modified": "2024-01-31T19:42:53.718Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NWI3ZmRiNWViNWYyOGJhY2I4NmZhZmQiLCJpYXQiOjE3MDY3MzAxNjMsImV4cCI6MTcwNjgxNjU2M30.AasHCmjwT-G57QqYGy_Cg3EwjLUa-KlubBMf257Zsgw"
+            },
+            "tests": []
+        }
+    ]
+}
